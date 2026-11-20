@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layout</title>
+  <link rel="stylesheet" href="/css/{ } layout.css">
+</head>
+<body>
+  <header>Header</header>
+  <main>
+    <article>Article</article>
+    <aside>Aside</aside>
+    <nav>Nav</nav>
+  </main>
+  <footer>Footer</footer>
+</body>
+
+</html>
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100hv;
+}
+
+header {
+  background-color: khaki;
+  padding: 34px 20px;
+}
+
+main {
+  display: flex;
+  flex: 1;
+}
+
+article {
+  background-color: white;
+  flex: 3;
+  padding: 20px;
+}
+
+aside {
+  background-color: #ffc0cb;
+  flex: 1;
+  padding: 20px;
+}
+
+nav {
+  background-color: #00ced1;
+  flex: 1;
+  padding: 20px;
+}
+
+footer {
+  background-color: khaki;
+  padding: 34px 20px;
+}
