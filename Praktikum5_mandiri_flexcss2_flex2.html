@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Implementasi Layout FlexBox - Galeri Foto</title>
+  <link rel="stylesheet" href="/css/{ } flex2.css">
+</head>
+<body>
+
+  <div class="gallery-container">
+    <!-- Baris Atas: 3 Foto -->
+    <div class="flex-row">
+      <div class="photo-item">
+        <img src="/img/alam1.jpg" alt="Foto 1">
+      </div>
+      <div class="photo-item">
+        <img src="/img/alam2.jpg" alt="Foto 2">
+      </div>
+      <div class="photo-item">
+        <img src="/img/alam3.jpg" alt="Foto 3">
+      </div>
+    </div>
+
+    <!-- Baris Bawah: 5 Foto -->
+    <div class="flex-row">
+      <div class="photo-item">
+        <img src="/img/alam4.jpg" alt="Foto 4">
+      </div>
+      <div class="photo-item">
+        <img src="/img/alam5.jpg" alt="Foto 5">
+      </div>
+      <div class="photo-item">
+        <img src="/img/alam6.jpg" alt="Foto 6">
+      </div>
+      <div class="photo-item">
+        <img src="/img/alam7.jpg" alt="Foto 7">
+      </div>
+      <div class="photo-item">
+        <img src="/img/alam8.jpg" alt="Foto 8">
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 16px;
+  font-family: sans-serif;
+}
+
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.flex-row {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+}
+
+.photo-item {
+  flex: 1;
+  height: clamp(65px, 15vw, 150px);
+  border: 2px solid #333;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #e0e0e0;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
