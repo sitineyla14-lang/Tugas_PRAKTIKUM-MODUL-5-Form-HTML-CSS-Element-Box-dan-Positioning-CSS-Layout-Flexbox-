@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Box</title>
+  <link rel="stylesheet" href="/css/{ } box3.css">
+</head>
+
+<body>
+  
+    <div class="container">
+      
+        <div class="row-top">
+          <div class="box kuning"></div>
+          <div class="box oranye"></div>
+        </div>
+        
+        <div class="row-middle">
+          <div class="box hijau"></div>
+          <div class="box abu"></div>
+          <div class="box biru-muda"></div>
+        </div>
+        
+        <div class="row-bottom">
+          <div class="box biru-tua"></div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.box {
+  border: 1px solid #555;
+}
+
+.row-top {
+  display: flex;
+  gap: 18px;
+  height: 80px;
+}
+
+.kuning {
+  width: 20%;
+  background-color: #f4ea56;
+}
+
+.oranye {
+  width: 80%;
+  background-color: #ff6624;
+}
+
+.row-middle {
+  display: flex;
+  gap: 15px;
+  height: 450px;
+}
+
+.hijau {
+  width: 20%;
+  background-color: #a8d58e;
+}
+
+.abu {
+  width: 60%;
+  background-color: #d3d5db;
+}
+
+.biru-muda {
+  width: 20%;
+  background-color: #52d3f7;
+}
+
+.row-bottom {
+  width: 100%;
+  height: 70px;
+}
+
+.biru-tua {
+  width: 100%;
+  height: 100%;
+  background-color: #1665e8;
+}
