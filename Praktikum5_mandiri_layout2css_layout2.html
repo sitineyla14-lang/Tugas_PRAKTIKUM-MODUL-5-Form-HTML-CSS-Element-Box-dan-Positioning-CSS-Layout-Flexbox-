@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>layout2</title>
+  <link rel="stylesheet" href="/css/{ } layout2.css">
+</head>
+<body>
+
+
+  <section class="bagian-layout">
+    <h3 class="judul-layout">(a) Layout Flexbox 1</h3>
+    <div class="layout-a">
+      <nav class="nav-a">Nav</nav>
+
+      <div class="right-wrapper-a">
+        <header class="header-a">Header</header>
+
+        <div class="middle-a">
+          <article class="article-a">Article</article>
+          <aside class="aside-a">Aside</aside>
+        </div>
+
+        <footer class="footer-a">Footer</footer>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="bagian-layout">
+    <h3 class="judul-layout">(b) Layout Flexbox 2</h3>
+    <div class="layout-b">
+      <header class="header-b">Header</header>
+
+      <div class="middle-b">
+        <aside class="aside-b">Aside</aside>
+
+        <article class="article-b">
+          <span>Article</span>
+          <div class="image-group">
+            <div class="image-box">Image</div>
+            <div class="image-box">Image</div>
+            <div class="image-box">Image</div>
+          </div>
+        </article>
+      </div>
+
+      <footer class="footer-b">Footer</footer>
+    </div>
+  </section>
+
+</body>
+</html>
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+.bagian-layout {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.judul-layout {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.layout-a {
+  display: flex;
+  min-height: 450px;
+  border: 1px solid #ccc;
+}
+
+.nav-a {
+  flex: 1;
+  background-color: #ffc0cb;
+  padding: 20px;
+}
+
+.right-wrapper-a {
+  flex: 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-a,
+.footer-a {
+  background-color: #e6df8a;
+  height: 80px;
+  padding: 20px;
+}
+
+.middle-a {
+  flex: 1;
+  display: flex;
+}
+
+.article-a {
+  flex: 3;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.aside-a {
+  flex: 1;
+  background-color: #1cf2e8;
+  padding: 20px;
+}
+
+
+.layout-b {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-height: 450px;
+  padding: 15px;
+  background-color: #f8a5a8;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.header-b,
+.footer-b {
+  background-color: #96d4e6;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middle-b {
+  flex: 1;
+  display: flex;
+  gap: 15px;
+}
+
+.aside-b {
+  flex: 1;
+  background-color: #54a8a8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article-b {
+  flex: 3;
+  background-color: #f27474;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.image-group {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.image-box {
+  flex: 1;
+  height: 95px;
+  background-color: #d6d6d6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
